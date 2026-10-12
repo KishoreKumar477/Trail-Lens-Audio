@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18372a">
+  <title>TrailLens Audio · Field Guide</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="TrailLens home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>TrailLens<span class="brand-dot">.</span></span></a>
+      <span class="edition">FIELD NOTES<br>VOL. 01</span>
+    </header>
+    <section class="intro">
+      <div class="location-line"><span class="pulse"></span><span>Ready for the trail</span><span class="rule"></span><span>Private by design</span></div>
+      <h1>A field guide<br><em>that knows when</em><br>to be quiet.</h1>
+      <p>Take one photograph. Hear the story. Then let the trail take over.</p>
+    </section>
+    <section class="capture" id="capture" aria-label="Capture a trail specimen">
+      <input id="camera" type="file" accept="image/*" capture="environment" hidden>
+      <img id="preview" alt="Your trail photo">
+      <div class="capture-empty"><span class="viewfinder" aria-hidden="true"></span><p>ONE SPECIMEN<br>ONE MOMENT</p></div>
+      <div class="capture-action"><button id="snap" class="primary"><span class="camera-icon" aria-hidden="true"></span>Open camera</button><p id="hint">Aim close · leave it where it grows</p></div>
+    </section>
+    <div class="method"><span>01</span><p>Photograph</p><i></i><span>02</span><p>Listen</p><i></i><span>03</span><p>Look up</p></div>
+    <div class="progress hidden" id="progress"><i></i><span>Making a careful field note…</span></div>
+    <section class="result hidden" id="result" aria-live="polite">
+      <div class="record-head"><span>FIELD RECORD</span><span>NO. 01</span></div>
+      <div class="result-top"><div><p class="eyebrow" id="category">FIELD FINDING</p><h2 id="commonName"></h2><p class="latin" id="scientificName"></p></div><span class="badge" id="safety"></span></div>
+      <div class="confidence"><span id="confidence"></span><p id="evidence"></p></div>
+      <p id="fact" class="fact"></p>
+      <div class="listen"><div class="sound-mark" aria-hidden="true"><b></b><b></b><b></b><b></b></div><div><strong>Field guide, in your ear</strong><small id="narration"></small></div><button class="play" id="play" aria-label="Play narration"><span>▶</span></button></div>
+      <div class="quest"><div class="quest-top"><span class="quest-compass">✦</span><p class="eyebrow">Pocket quest · 20 seconds</p></div><p id="questText"></p><button id="startQuest" class="quest-button">Begin, then pocket your phone <span>→</span></button></div>
+      <audio id="audio"></audio><audio id="questAudio"></audio><p class="mode" id="mode"></p>
+    </section>
+    <section class="field-ethic"><span>TRAIL ETHIC</span><p>Observe. Don’t disturb.<br>Take the memory, not the specimen.</p></section>
+    <footer><span>Made for the outdoors</span><i></i><span>Touch Grass</span></footer>
+  </main>
+  <section class="pocket hidden" id="pocket" aria-live="assertive"><span class="star">✦</span><p class="eyebrow">YOUR POCKET QUEST</p><h2>Eyes up.<br>Trail on.</h2><p id="pocketPrompt"></p><button id="closePocket">I’m back <span>→</span></button></section>
+  <script src="/static/app.js"></script>
+</body>
+</html>
